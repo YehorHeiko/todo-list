@@ -17,8 +17,8 @@ function List() {
       { id: Date.now(), text1: inputOne, text2: inputTwo },
     ]);
   }
-  function removeProperties() {
-    setTodo((e) => e.id !== id ? );
+  function removeProperties(id: number) {
+    setTodo((e) => e.filter((todo) => todo.id !== id));
   }
 
   return (
@@ -44,7 +44,7 @@ function List() {
             {todo.map((e) => (
               <p key={e.id}>
                 {e.text1} {e.text2}
-                <button>DEL</button>
+                <button onClick={() => removeProperties(e.id)}>DEL</button>
               </p>
             ))}
           </ul>
