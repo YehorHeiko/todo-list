@@ -1,0 +1,28 @@
+.bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.block {
+    text-align: center;
+    background-color: rgb(70, 15, 102);
+    border-radius: 20px;
+    height: 200px;
+    width: 400px;
+}
+.to_do_block {
+    
+}
+.input {
+    color: black;
+    background-color: rgb(255, 247, 251);
+    border: 2px solid rgb(167, 41, 167);
+    border-radius: 20px;
+}
+button {
+    background-color: rgba(122, 40, 109, 0.918);
+    border-radius: 8px;
+    padding: 2px;
+    
+}
