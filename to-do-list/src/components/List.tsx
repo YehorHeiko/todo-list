@@ -18,8 +18,8 @@ function List() {
     ]);
   }
   function removeProperties(id: number) {
-    // setTodo((e) => e.filter((todo) => todo.id !== id));
-    setTodo(todo.filter((e) => e.id !== id))
+    setTodo((e) => e.filter((todo) => todo.id !== id));
+    // setTodo(todo.filter((e) => e.id !== id))
   }
 
   return (
