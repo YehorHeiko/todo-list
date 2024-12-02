@@ -17,8 +17,7 @@ function List() {
       { id: Date.now(), text1: inputOne, text2: inputTwo },
     ]);
   }
-  function removeProperties(id: number) {
-    // setTodo((e) => e.filter((todo) => todo.id !== id));
+  function reemove (id) {
     setTodo(todo.filter((e) => e.id !== id))
   }
 
@@ -28,28 +27,23 @@ function List() {
         <h1>ToDoList</h1>
         <div className={styles.to_do_block}>
           <input
-            onChange={(e) => setInputOne(e.target.value)}
-            type="text"
             value={inputOne}
-            className={styles.input}
+            type="text"
+            onChange={(e) => setInputOne(e.target.value)}
           />
           <input
-            onChange={(e) => setInputTwo(e.target.value)}
-            type="text"
             value={inputTwo}
-            className={styles.input}
+            type="text"
+            onChange={(e) => setInputTwo(e.target.value)}
           />
-          <button onClick={addProperties}>ADD ToDo</button>
-
-          <ul>
-            {todo.map((e) => (
-              <p key={e.id}>
-                {e.text1} {e.text2}
-                <button onClick={() => removeProperties(e.id)}>DEL</button>
-              </p>
-            ))}
-          </ul>
+          <button onClick={addProperties}>Добавить</button>
         </div>
+        {todo.map((e) => (
+          <p>
+            {e.text1} - {e.text2}
+            <button onClick={() => reemove(e.id)}>x</button>
+          </p>
+        ))}
       </div>
     </div>
   );
