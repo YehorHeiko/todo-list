@@ -29,6 +29,7 @@ function List() {
           <input
             value={inputOne}
             type="text"
+            
             onChange={(e) => setInputOne(e.target.value)}
           />
           <input
