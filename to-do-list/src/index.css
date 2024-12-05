@@ -2,11 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: wheat;
+    color: rgb(51, 42, 26);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .main {
-    background-color: rgb(108, 27, 139);
+    background-color: rgb(204, 189, 144);
     height: 100vh;
 }

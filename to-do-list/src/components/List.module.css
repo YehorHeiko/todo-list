@@ -6,22 +6,32 @@
 }
 .block {
     text-align: center;
-    background-color: rgb(70, 15, 102);
+    background-color: rgb(148, 125, 95);
     border-radius: 20px;
-    height: 200px;
+    padding: 20px;
+    min-height: 250px;
+    height: auto;
     width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+.block>*:last-child {
+    margin-top: auto;
 }
 .to_do_block {
-    
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 10px;
 }
 .input {
     color: black;
     background-color: rgb(255, 247, 251);
-    border: 2px solid rgb(167, 41, 167);
+    border: 2px solid rgb(197, 194, 162);
     border-radius: 20px;
 }
 button {
-    background-color: rgba(122, 40, 109, 0.918);
+    background-color: rgba(179, 168, 142, 0.918);
     border-radius: 8px;
     padding: 2px;
     
