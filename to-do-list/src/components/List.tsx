@@ -12,13 +12,7 @@ function List() {
   const [inputTwo, setInputTwo] = useState("");
 
   function addProperties() {
-    setTodo((e) => [
-      ...e,
-      { id: Date.now(), text1: inputOne, text2: inputTwo },
-    ]);
-  }
-  function reemove (id) {
-    setTodo(todo.filter((e) => e.id !== id))
+    setTodo(e => [...e , { id: Date.now(), text1: inputOne, text2: inputTwo }]);
   }
 
   return (
@@ -28,22 +22,21 @@ function List() {
         <div className={styles.to_do_block}>
           <input
             value={inputOne}
-            type="text"
             onChange={(e) => setInputOne(e.target.value)}
           />
           <input
             value={inputTwo}
-            type="text"
             onChange={(e) => setInputTwo(e.target.value)}
           />
-          <button onClick={addProperties}>Добавить</button>
+          <button onClick={addProperties}>Add</button>
         </div>
-        {todo.map((e) => (
-          <p>
-            {e.text1} - {e.text2}
-            <button onClick={() => reemove(e.id)}>x</button>
-          </p>
-        ))}
+        <ul>
+          {todo.map(e => (
+            <p key={e.id}>
+              {e.text1} {e.text2}
+            </p>
+          ))}
+        </ul>
       </div>
     </div>
   );
