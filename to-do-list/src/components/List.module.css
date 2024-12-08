@@ -29,6 +29,16 @@
     background-color: rgb(255, 247, 251);
     border: 2px solid rgb(197, 194, 162);
     border-radius: 20px;
+    margin-right: 50px;
+}
+
+.to_do_label {
+    background-position: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    
 }
 button {
     background-color: rgba(179, 168, 142, 0.918);

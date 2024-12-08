@@ -34,12 +34,16 @@ function List() {
           />
           <button onClick={addProperties}>Add</button>
         </div>
-        <ul>
+        <ul >
           {todo.map(e => (
-            <p key={e.id}>
+            <div className={styles.ull} key={e.id}>
+              <label className={styles.to_do_label}>
+                <input type="text" className={styles.to_do_label}/>
+              </label>
               {e.text1} {e.text2}
               <button onClick={() => deleteProperties(e.id)}>Delete</button>
-            </p>
+              
+            </div>
           ))}
         </ul>
         <Buttons />
